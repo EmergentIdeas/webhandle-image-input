@@ -1,0 +1,37 @@
+.webhandle-file-input {
+	--inner-box-background: var(--box-background, #eeeeee);
+	.image-holder {
+		height: 300px;
+		display: flex;
+		justify-items: center;
+		justify-content: center;
+		align-items: center;
+		margin-bottom: 15px;
+		img {
+			max-width: 100%;
+			max-height: 100%;
+			object-fit: cover;
+			object-position: center center;
+		}
+	}
+	
+	&.empty {
+		.image-holder {
+			background-color: var(--inner-box-background);
+			&:before {
+				content: "Click to browse."
+			}
+		}
+		.remove {
+			display: none;
+		}
+	}
+	
+	.controls {
+		button {
+			border: none;
+			background-color: transparent;
+			cursor: pointer;
+		}
+	}
+}

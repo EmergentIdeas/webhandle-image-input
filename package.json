@@ -1,0 +1,34 @@
+{
+  "name": "@webhandle/image-input",
+  "version": "1.0.0",
+  "description": "",
+  "main": "public/js/image-input.mjs",
+  "scripts": {
+    "test": "run-webhandle-dev ./test/start-server.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EmergentIdeas/webhandle-image-input.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/EmergentIdeas/webhandle-image-input/issues"
+  },
+  "homepage": "https://github.com/EmergentIdeas/webhandle-image-input#readme",
+  "dependencies": {
+    "@webhandle/backbone-view": "^1.0.4",
+    "@webhandle/dialog": "^1.0.3",
+    "@webhandle/initialize-webhandle-component": "^1.0.2",
+    "@webhandle/material-icons": "^1.0.1",
+    "@webhandle/tree-file-browser": "^2.0.2"
+  }
+  , "files": [
+	"README.md"
+	, "*.mjs"
+	, "public/js"
+	, "public/css"
+  ]
+}

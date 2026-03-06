@@ -1,0 +1,30 @@
+__::start__
+<div>
+	<p> Image Input</p>
+	<label>
+		Preview:
+		<input data-view-component="@webhandle/image-input" type="text" name="preview" />
+
+	</label>
+	<label>
+		Preview 2:
+		<input data-view-component="@webhandle/image-input" type="hidden" name="preview2" value="/img/cat-5.jpg" />
+	</label>
+	<label>
+		Preview 3:
+		<input data-view-component="@webhandle/image-input" type="hidden" name="preview3" value="/img/cat-5.jpg" data-starting-directory="img" />
+	</label>
+	<label>
+		Doc 3:
+		<input data-view-component="@webhandle/file-input" type="hidden" name="preview3" value="/img/cat-5.jpg"  />
+	</label>
+	<label>
+		Doc 4:
+		<input data-view-component="@webhandle/file-input" type="hidden" name="preview3"  data-starting-directory="css"  />
+	</label>
+</div>
+__$globals.externalResourceManager::@webhandle/image-input/createInputs__
+__$globals.externalResourceManager::@webhandle/image-input/createInputs__
+__$globals.externalResourceManager::@webhandle/image-input/createInputs__
+
+__::end__
