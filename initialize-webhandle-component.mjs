@@ -4,7 +4,6 @@ import path from "node:path"
 import setupBackboneView from "@webhandle/backbone-view/initialize-webhandle-component.mjs"
 import treeFileBrowserSetup from "@webhandle/tree-file-browser/initialize-webhandle-component.mjs"
 import setupMaterialIcons from "@webhandle/material-icons/initialize-webhandle-component.mjs"
-// import stylesSetup from "ei-form-styles-1/initialize-webhandle-component.mjs"
 
 let initializeWebhandleComponent = createInitializeWebhandleComponent()
 
@@ -65,22 +64,16 @@ initializeWebhandleComponent.setup = async function (webhandle, config) {
 
 	}
 
-	let templates = {}
 
-	webhandle.tripartiteTemplateLoaders.push((name, callback) => {
-		callback(templates[name])
-	})
 
-	templates['@webhandle/image-input/addExternalResources'] = (data) => {
+	webhandle.addTemplate('@webhandle/image-input/addExternalResources', (data) => {
 		let externalResourceManager = getExternalResourceManager(data)
 		manager.addExternalResources(externalResourceManager)
-	}
+	})
 
-	templates['@webhandle/image-input/createInputs'] = (data) => {
+	webhandle.addTemplate('@webhandle/image-input/createInputs', (data) => {
 		try {
-
 			let externalResourceManager = getExternalResourceManager(data)
-			console.log(externalResourceManager)
 			manager.addExternalResources(externalResourceManager)
 
 			let resources = externalResourceManager.render()
@@ -96,7 +89,7 @@ initializeWebhandleComponent.setup = async function (webhandle, config) {
 		catch(e) {
 			console.error(e)
 		}
-	}
+	})
 	
 
 	// Allow access to the component and style code
