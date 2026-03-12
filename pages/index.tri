@@ -6,18 +6,22 @@ __::start__
 		<input data-view-component="@webhandle/image-input" type="text" name="preview" />
 
 	</label>
+	<br><br>
 	<label>
 		Preview 2:
 		<input data-view-component="@webhandle/image-input" type="hidden" name="preview2" value="/img/cat-5.jpg" />
 	</label>
+	<br><br>
 	<label>
 		Preview 3:
 		<input data-view-component="@webhandle/image-input" type="hidden" name="preview3" value="/img/cat-5.jpg" data-starting-directory="img" />
 	</label>
+	<br><br>
 	<label>
 		Doc 3:
 		<input data-view-component="@webhandle/file-input" type="hidden" name="preview3" value="/img/cat-5.jpg"  />
 	</label>
+	<br><br>
 	<label>
 		Doc 4:
 		<input data-view-component="@webhandle/file-input" type="hidden" name="preview3"  data-starting-directory="css"  />
