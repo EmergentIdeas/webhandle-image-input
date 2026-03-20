@@ -62,7 +62,7 @@ or is not available because the user is not an administrator, then the direct us
 
 ```js
 import { ImageInput } from "@webhandle/image-input"
-let input = document.querySelect('#my-input-el')
+let input = document.querySelector('#my-input-el')
 let img = new ImageInput({
 	input: input
 	, sink: remoteFileSink
