@@ -25,9 +25,7 @@ initializeWebhandleComponent.setup = async function (webhandle, config) {
 	// let stylesManager = await stylesSetup(webhandle)
 	
 	webhandle.routers.preDynamic.use((req, res, next) => {
-		if(config.provideResources || (req.agentInfo && req.agentInfo.browser === 'firefox')) {
-			// At present, firefox won't let us use multiple importmaps, so if we think
-			// we might need this, let's provide it in the beginning.
+		if(config.provideResources) {
 			manager.addExternalResources(res.locals.externalResourceManager)
 		}
 		
@@ -69,6 +67,12 @@ initializeWebhandleComponent.setup = async function (webhandle, config) {
 	webhandle.addTemplate('@webhandle/image-input/addExternalResources', (data) => {
 		let externalResourceManager = getExternalResourceManager(data)
 		manager.addExternalResources(externalResourceManager)
+	})
+
+	webhandle.addTemplate('@webhandle/image-input/renderExternalResources', (data) => {
+		let externalResourceManager = getExternalResourceManager(data)
+		manager.addExternalResources(externalResourceManager)
+		return externalResourceManager.render()
 	})
 
 	webhandle.addTemplate('@webhandle/image-input/createInputs', (data) => {
